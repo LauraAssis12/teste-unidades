@@ -23,7 +23,7 @@ export class InfoUnidadesComponent {
     const cnes = this.route.snapshot.paramMap.get('cnes');
     if (cnes) {
       this.http
-        .get(`https://apidadosabertos.saude.gov.br/v1/cnes/estabelecimentos/${cnes}`)
+        .get(`https://apidadosabertos.saude.gov.br/cnes/estabelecimentos/${cnes}`)
         .subscribe({
           next: (data: any) => {
             this.unit = data;
@@ -31,7 +31,7 @@ export class InfoUnidadesComponent {
           },
           error: () => {
             this.loading = false;
-            alert('Erro ao carregar os detalhes!');
+            alert('Erro ao acessar dados da unidade');
           },
         });
     }

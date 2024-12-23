@@ -25,10 +25,10 @@ export class ListaUnidadesComponent {
   fetchUnits() {
     this.loading = true;
     this.http
-      .get('/cnes/estabelecimentos')
+      .get('https://apidadosabertos.saude.gov.br/cnes/estabelecimentos')
       .subscribe({
         next: (data: any) => {
-          console.log('Dados recebidos da API:', data); 
+          console.log('Dados da API:', data); 
           this.units = data;
           this.loading = false;
         },

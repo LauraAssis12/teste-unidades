@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'; 
 import { CommonModule } from '@angular/common';
 
-
 @Component({
   selector: 'app-cadastro-unidades',
   standalone: true,
@@ -26,10 +25,10 @@ export class CadastroUnidadesComponent {
 
   submitForm() {
     this.http
-      .post('/cnes/estabelecimentos', this.unit)
+      .post('https://apidadosabertos.saude.gov.br/cnes/estabelecimentos', this.unit)
       .subscribe({
         next: () => {
-          alert('Unidade cadastrada com sucesso!');
+          alert('Unidade cadastrada com sucesso');
         },
         error: () => {
           alert('Erro ao cadastrar unidade.');
