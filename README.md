@@ -1,4 +1,25 @@
-# UnidadesSus
+# Teste - Sistema de Listagem das Unidades de Saúde
+
+Este projeto é uma aplicação Angular construída para listar unidades de saúde do SUS utilizando a API do [Dados Abertos SUS](https://apidadosabertos.saude.gov.br/v1/cnes/estabelecimentos).
+
+Observação: Não consegui utilizar a URL disponibilizada (ERRO 404), alterei para https://apidadosabertos.saude.gov.br/cnes/estabelecimentos (Esse endereço era o único que estava sendo acessável diretamente pelo link no navegador). No entanto, apesar da instalação e configuração das extensões (CORS Everywhere e CORS Unblock) continuei recebendo erro de CORS e não consegui renderizar o código no navegador. Por conta disso, também não consegui seguir com a estilização dos componentes.
+
+## Funcionalidades
+
+1. **Listagem de Estabelecimentos**:
+   - Exibe uma lista com informações sobre as unidades de saúde.
+   - Possui filtros para filtrar por CNES, Nome Fantasia e CNPJ.
+   - A lista é exibida com os seguintes dados: CNES, razão social, nome fantasia, CNPJ, telefone e e-mail.
+   - Permite visualizar mais detalhes de cada estabelecimento ao clicar no botão "Visualizar".
+
+2. **Visualização de Detalhes**:
+   - Exibe os detalhes de uma unidade.
+   - Mostra a localização do estabelecimento no mapa.
+
+3. **Cadastro de Estabelecimento**:
+   - Permite o cadastro de novos estabelecimentos de saúde utilizando um formulário.
+
+
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
@@ -12,47 +33,6 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
 ## Additional Resources
 
