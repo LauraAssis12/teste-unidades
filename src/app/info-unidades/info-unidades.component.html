@@ -1,0 +1,24 @@
+<div *ngIf="loading">Carregando...</div>
+
+<div *ngIf="!loading">
+  <h2>{{ unit.razao_social }}</h2>
+  <p>Código CNES: {{ unit.cnes }}</p>
+  <p>Nome Fantasia: {{ unit.nome_fantasia }}</p>
+  <p>CNPJ: {{ unit.cnpj }}</p>
+  <p>Telefone: {{ unit.telefone }}</p>
+  <p>Email: {{ unit.email }}</p>
+  <p>Turno de Atendimento: {{ unit.turno_atendimento }}</p>
+  
+  <h3>Endereço:</h3>
+  <p>{{ unit.endereco }}</p>
+
+
+  <iframe
+    width="600"
+    height="450"
+    src="https://maps.google.com/maps?q={{ unit.latitude }},{{ unit.longitude }}&z=15&output=embed"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+</div>
+

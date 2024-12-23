@@ -1,0 +1,28 @@
+<div *ngIf="loading">Carregando...</div>
+<table>
+  <thead>
+    <tr>
+      <th>Código CNES</th>
+      <th>Razão Social</th>
+      <th>Nome Fantasia</th>
+      <th>CNPJ</th>
+      <th>Telefone</th>
+      <th>E-mail</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let unit of units">
+      <td>{{ unit.cnes }}</td>
+      <td>{{ unit.razao_social }}</td>
+      <td>{{ unit.nome_fantasia }}</td>
+      <td>{{ unit.cnpj }}</td>
+      <td>{{ unit.telefone }}</td>
+      <td>{{ unit.email }}</td>
+      <td>
+        <button (click)="viewDetails(unit.cnes)">Visualizar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

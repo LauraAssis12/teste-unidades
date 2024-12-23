@@ -1,0 +1,8 @@
+{
+    "/cnes/estabelecimentos": {
+      "target": "https://apidadosabertos.saude.gov.br",
+      "secure": false,
+      "changeOrigin": true
+    }
+  }
+  

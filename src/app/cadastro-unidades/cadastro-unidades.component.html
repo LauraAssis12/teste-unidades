@@ -1,0 +1,29 @@
+<h2>Cadastro de Unidade de Saúde</h2>
+
+<form (ngSubmit)="submitForm()">
+  <label for="cnes">Código CNES:</label>
+  <input id="cnes" [(ngModel)]="unit.cnes" name="cnes" required>
+
+  <label for="razao_social">Razão Social:</label>
+  <input id="razao_social" [(ngModel)]="unit.razao_social" name="razao_social" required>
+
+  <label for="nome_fantasia">Nome Fantasia:</label>
+  <input id="nome_fantasia" [(ngModel)]="unit.nome_fantasia" name="nome_fantasia" required>
+
+  <label for="cnpj">CNPJ:</label>
+  <input id="cnpj" [(ngModel)]="unit.cnpj" name="cnpj" required>
+
+  <label for="telefone">Telefone:</label>
+  <input id="telefone" [(ngModel)]="unit.telefone" name="telefone" required>
+
+  <label for="email">Email:</label>
+  <input id="email" [(ngModel)]="unit.email" name="email" required>
+
+  <label for="cep">CEP:</label>
+  <input id="cep" [(ngModel)]="unit.cep" name="cep" (blur)="fetchAddress(unit.cep)" required>
+
+  <label for="endereco">Endereço:</label>
+  <input id="endereco" [(ngModel)]="unit.endereco" name="endereco" required readonly>
+
+  <button type="submit">Cadastrar</button>
+</form>
